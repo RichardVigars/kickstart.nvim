@@ -884,7 +884,6 @@ require('lazy').setup({
   require 'custom.plugins.copilot',
 
   require 'custom.plugins.aerial',
-  vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>'),
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
