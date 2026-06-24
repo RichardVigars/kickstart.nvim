@@ -27,7 +27,9 @@ return {
     vim.api.nvim_create_autocmd('VimEnter', {
       callback = function()
         if vim.fn.argc() == 0 then
-          vim.cmd('Neotree show')
+          vim.defer_fn(function()
+            vim.cmd('Neotree show')
+          end, 10)
         end
       end,
     })
