@@ -5,8 +5,11 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       local lint = require 'lint'
+      lint.linters.clangtidy.cmd = '/opt/homebrew/opt/llvm/bin/clang-tidy'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
+        cpp = { 'clangtidy' },
+        c = { 'clangtidy' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
